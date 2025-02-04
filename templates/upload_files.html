@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Wafer fault detection</title>
-  <link rel="stylesheet" href="style.css"> <!-- Correct path to your CSS file -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
    
@@ -28,5 +28,25 @@
 <script src='https://100dayscss.com/codepen/js/jquery.min.js'></script>
 <script src="./script.js"></script>
 
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Sensor Data File</title>
+    <!-- Link to static JS file -->
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Upload Sensor Data File</h1>
+    <form method="post" enctype="multipart/form-data">
+        <label for="file">Choose a CSV file to upload:</label>
+        <input type="file" name="file" accept=".csv" required>
+        <button type="submit">Analyze File</button>
+    </form>
 </body>
 </html>

@@ -8,7 +8,7 @@ from xgboost import XGBClassifier
 from sklearn.svm import SVC
 from sklearn.ensemble import RandomForestClassifier,GradientBoostingClassifier
 from sklearn.model_selection import GridSearchCV,train_test_split
-
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 from src.constant import *
 from src.exception import CustomException
 from src.logger import logging
